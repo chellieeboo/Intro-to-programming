@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Calculate Difference</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <h1>Calculate Difference from 13</h1>
+    <p>Please enter a number:</p>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="showResult()">Calculate</button>
+
+    <div class="result" id="resultDisplay"></div>
+
+    <script>
+       
+        function calculateDifference(n) {
+           let m = 13; 
+           let difference = n - m; 
+
+
+            if (n > m) {
+                return difference * 2; 
+            } else {
+                return (difference);
+            }
+        }
+
+        
+        function showResult() {
+            let userInput = document.getElementById("numberInput").value; 
+            let number = parseFloat(userInput); 
+
+            
+            if (number) {
+                let result = calculateDifference(number);
+                document.getElementById("resultDisplay").innerText = "The result is: " + result;
+            } else {
+                document.getElementById("resultDisplay").innerText = "Please enter a valid number.";
+            }
+        }
+    </script>
+
+</body>
+</html>

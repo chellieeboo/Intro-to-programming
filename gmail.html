@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail - Profile</title>
+  <link rel="icon" type="image/x-icon" href="../images/gmail.jpg">
+
+
+  
+  <link rel="stylesheet" href="styles.css">
+
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .profile-container {
+      background-color: pink;
+      padding: 20px;
+      max-width: 600px;
+      margin: 50px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .name {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .email {
+      font-size: 16px;
+      color: #555;
+    }
+
+    h1, h3 {
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img class="profile-pic" src="../images/HA.JPG" alt="Profile Picture">
+      <h1 class="name">Rochelle Bayobog</h1>
+      <p class="email">bayogbogrochelle5@gmail.com</p>
+    </div>
+
+    <section>
+      <h1>Message Me!</h1>
+
+      <h3></h3>
+      <form action="/action_page.php" method="post">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+        <input type="submit" value="Submit">
+      </form>
+
+      
+</body>
+</html>
