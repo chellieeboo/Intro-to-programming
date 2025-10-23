@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #fff;
+            background-color: #ff70a6;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive Grid */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .column {
+            background-color: #ffecf2;
+            border: 2px solid #ff70a6;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .column:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column" id="Pet">
+            <h1>Pets</h1>
+            <div class="Pet">
+                <img src="../images/hamster.jpg" alt="Hamster">
+                <p>Hamsters are rodents belonging to the subfamily Cricetinae, which contains 19 species classified in seven genera. They have become established as popular small pets.</p>
+            </div>
+            <div class="Pet">
+                <img src="../images/turtle.jpg" alt="Turtle">
+                <p>Pet turtles are quiet and relatively undemanding, which makes them an appealing option as a companion.</p>
+            </div>
+            <div class="Pet">
+                <img src="../images/parakeet.jpg" alt="Parakeet">
+                <p>A parakeet is any one of many small- to medium-sized species of parrot, in multiple genera, that generally has long tail feathers.</p>
+            </div>
+        </div>
+
+        <div class="column" id="Flower">
+            <h1>Flowers</h1>
+            <div class="Flower">
+                <img src="../images/dahlia.jpg" alt="Dahlia">
+                <p>Dahlia is a genus of bushy, tuberous, herbaceous perennial plants native to Mexico and Central America.</p>
+            </div>
+            <div class="Flower">
+                <img src="../images/iris.jpg" alt="Iris">
+                <p>Faith, hope, and wisdom. As the gentle petals strengthen in warmer weather, they also symbolize the start of spring and new beginnings.</p>
+            </div>
+            <div class="Flower">
+                <img src="../images/tulips.jpg" alt="Tulips">
+                <p>Tulips are spring-blooming perennial herbaceous bulbiferous geophytes in the Tulipa genus.</p>
+            </div>
+        </div>
+
+        <div class="column" id="Food">
+            <h1>Food</h1>
+            <div class="Food">
+                <img src="../images/papaitan.jpg" alt="papaitan">
+                <p>Pinapaitan or papaitan (lit. "to [make] bitter") is a Filipino-Ilocano stew made with goat meat and offal and flavored with its bile, chyme, or cud (also known as papait).</p>
+            </div>
+            <div class="Food">
+                <img src="../images/adobo.jpg" alt="Adobo">
+                <p>Adobo is the immersion of food in a stock (or sauce) composed variously of paprika, oregano, salt, garlic, and vinegar to preserve and enhance its flavor.</p>
+            </div>
+            <div class="Food">
+                <img src="../images/tofu.jpg" alt="Tofu">
+                <p>Tofu Sisig is a dish that's made of deep-fried tofu with a creamy and umami sauce. It is a little spicy and perfect with warm white rice.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
