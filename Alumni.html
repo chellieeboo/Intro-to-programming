@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Portal - Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .dashboard-container {
+            width: 90%;
+            max-width: 900px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 32px;
+            color: #333;
+            font-weight: 600;
+        }
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        .profile-info {
+            margin-left: 20px;
+            display: none; /* Hide profile info initially */
+        }
+        .profile-info p {
+            font-size: 18px;
+            margin: 8px 0;
+            color: #555;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #eee;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Batchmates Section */
+        .batchmates-container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .batchmates-container h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .batchmates-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .batchmate {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .batchmate img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .batchmate h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+        .batchmate p {
+            font-size: 14px;
+            color: #777;
+        }
+        .batchmate:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.05);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .dashboard-container {
+                width: 95%;
+                padding: 20px;
+            }
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Welcome to Your Alumni Dashboard</h1>
+            
+        </header>
+        <section class="profile" onclick="toggleProfile()">
+            <img class="profile-pic" id="profile-pic" src="../images/HA.JPG" alt="Profile Picture">
+            <div class="profile-info" id="profile-info">
+                <p><strong>Name:</strong> Rochelle Bayogbog</p>
+                <p><strong>Graduation Year:</strong> 2028</p>
+                <p><strong>Degree:</strong> BSIT</p>
+                <p><strong>Email:</strong> bayogbogrochelle5@gmail.com</p>
+            </div>
+        </section>
+        <div class="batchmates-container">
+            <h2>Your Batchmates</h2>
+            <div class="batchmates-list">
+                <div class="batchmate" onclick="revealProfile('Precious Valera', 'BSIT', '../images/girl.jpg', 'preciousvalera@example.com')">
+                    <img src="../images/girl.jpg" alt="Batchmate 1">
+                    <h3>Precious Valera</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Lyka Mae Ducusin', 'BSIT', '../images/girl.jpg', 'lykamaeducusin@example.com')">
+                    <img src="../images/girl.jpg" alt="Batchmate 2">
+                    <h3>Lyka Mae Ducusin</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Ardeeh Valdez', 'BSIT', '../images/girl.jpg', 'email3@example.com')">
+                    <img src="../images/girl.jpg" alt="Batchmate 3">
+                    <h3>Ardeeh Valdez</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Joana Marie B. Rondina', 'BSIT', '../images/girl.jpg', 'email3@example.com')">
+                    <img src="../images/girl.jpg" alt="Batchmate 4">
+                    <h3>Joana Marie B. Rondina</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Hartley Reasonda', 'BSIT', '../images/girl.jpg', 'email3@example.com')">
+                    <img src="../images/girl.jpg" alt="Batchmate 5">
+                    <h3>Hartley Reasonda</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Prince Chavez', 'BSIT', '../images/boys.jpg', 'email3@example.com')">
+                    <img src="../images/boys.jpg" alt="Batchmate 6">
+                    <h3>Prince Chavez</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Gian Solis', 'BSIT', '../images/boys.jpg', 'email3@example.com')">
+                    <img src="../images/boys.jpg" alt="Batchmate 7">
+                    <h3>Gian Solis</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Alexander Del Valle', 'BSIT', '../images/boys.jpg', 'email3@example.com')">
+                    <img src="../images/boys.jpg" alt="Batchmate 8">
+                    <h3>Alexander Del Valle</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Meltonie Caldit', 'BSIT', '../images/boys.jpg', 'email3@example.com')">
+                    <img src="../images/boys.jpg" alt="Batchmate 9">
+                    <h3>Meltonie Caldit</h3>
+                    <p>BSIT</p>
+                </div>
+                <div class="batchmate" onclick="revealProfile('Israel Jovenal', 'BSIT', '../images/boys.jpg', 'email3@example.com')">
+                    <img src="../images/boys.jpg" alt="Batchmate 10">
+                    <h3>Israel Jovenal</h3>
+                    <p>BSIT</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>© 2024 Alumni Portal | <a href="#">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle the profile section (show/hide the additional profile info)
+        function toggleProfile() {
+            const profileInfo = document.getElementById('profile-info');
+            profileInfo.style.display = profileInfo.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Update profile information when a batchmate is clicked
+        function revealProfile(name, degree, imgSrc, email) {
+            // Change profile picture and info
+            document.getElementById('profile-pic').src = imgSrc;
+            document.getElementById('profile-info').innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Graduation Year:</strong> 2028</p>
+                <p><strong>Degree:</strong> ${degree}</p>
+                <p><strong>Email:</strong> ${email}</p>
+            `;
+            // Show profile info if hidden
+            document.getElementById('profile-info').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 0;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content area */
+        .main-content {
+            margin-left: 250px;  /* Leave space for sidebar */
+            padding: 20px;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        .form-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 120px;
+            padding: 12px;
+            margin: 0 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #575757;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button a:hover {
+            color: #ccc;
+        }
+
+        .form-group button:last-child {
+            background-color: #28a745;
+        }
+
+        .form-group button:last-child:hover {
+            background-color: #218838;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .modal-content h2 {
+            margin: 0;
+            color: #28a745;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Sidebar */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                box-shadow: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .sidebar a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="https://www.nlac.edu.ph">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="vision.html">Vision</a>
+    </div>
+
+    <div class="main-content">
+        <main>
+            <div class="container">
+                <h1>Registration Form</h1>
+                <form id="registrationForm" action="login.html" method="post" onsubmit="showMessage(event)">
+                    <div class="input">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" required>
+
+                        <label for="mname">Middle Name:</label>
+                        <input type="text" id="mname" name="mname" required>
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" required>
+
+                        <div>
+                            <label>Gender:</label>
+                            <label for="male"><input type="radio" id="male" name="gender" value="Male" required> Male</label>
+                            <label for="female"><input type="radio" id="female" name="gender" value="Female" required> Female</label>
+                        </div>
+
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" required>
+
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="grad_date">Graduation Date:</label>
+                        <input type="date" id="grad_date" name="grad_date" required>
+
+                        <label for="course">Course:</label>
+                        <select id="course" name="course" required>
+                            <option value="SOC">SOC</option>
+                            <option value="SBE">SBE</option>
+                            <option value="SON">SON</option>
+                            <option value="STE">STE</option>
+                            <option value="SAS">SAS</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit"   id="submitButton">Submit</button>
+                        <button><a href="Table.html">Table</a></button>
+                        <button><a href="Alumni.html">Alumni Portal</a></button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Success Message -->
+    <div class="submit"></div>
+    <button id="Submit">Submit</button>
+    <input type="checkbox" id="remember-me">
+    <label for="remember-me">Remember me</label>
+
+</div>
+<script>
+    // JavaScript to show a registration message on submit
+    document.getElementById("Submit").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevents the form from submitting if it's inside a form
+        alert("You are registered!");
+    });
+</script>
+   
+    
+
+</body>
+</html>
+
+
+
+
+
+
+

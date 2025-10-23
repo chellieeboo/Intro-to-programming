@@ -1,60 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Menu</title>
-    </head>
-    <body>
-        <style>
-            table,th,td {
-                border:1px solid black;
-                border-collapse:collapse
-            }
-            </style>
-            <table style width:100%>
-                <tr>
-                    <th>Fruits</th>
-                    <th>Definition</th>
-                    <th>Benefits</th>
-                    <th>Scientific Name</th>  
-                </tr>
-                <tr>
-                    <td>Grapes</td>
-                    <td>A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. 
-                        Grapes are a non-climacteric type of fruits</td>
-                    <td>Boost your immunity,Provides Helpful Antioxidants,Keeps You Hydrated</td>
-                    <td>Vitis</td>
-                </tr>
-                <tr>
-                    <td>Banana</td>
-                    <td>A long curved fruit which grows in clusters and has soft pulpy flesh and yellow skin when ripe.
-                        "a bunch of bananas</td>
-                    <td>Bananas contain fiber, potassium, folate, and antioxidants, such as vitamin C.</td>
-                    <td>Musa</td>
-                </tr>
-               <tr>
-                    <td>Apple</td>
-                    <td>An apple is a round, edible fruit produced by an apple tree Apple trees are cultivated worldwide
-                        and are the most widely grown species in the genus Malus</td>
-                    <td>A good source of nutrients, including fiber, vitamin C, and antioxidants 
-                        which can help support healthy digestion, brain health, and weight management </td>
-                    <td>Malus Domestica</td>
-                </tr>
-                <tr>
-                    <td>Watermelon</td>
-                    <td>Watermelon is a flowering plant species of the Cucurbitaceae family and the name of its edible fruit.
-                        A scrambling and trailing vine-like plant, it is a highly cultivated fruit worldwide, with more than 1,000 varieties.</td>
-                    <td>Help ove blood through your body and can lower your blood pressure </td>
-                    <td>Citrullus Lanatus</td>
-                </tr>
-                <tr>
-                    <td>Strawberry</td>
-                    <td>The garden strawberry is a widely grown hybrid species of the genus Fragaria in the rose family, Rosaceae,
-                        collectively known as the strawberries, which are cultivated worldwide for their fruit.</td>
-                    <td>May regulate blood sugar,May support heart</td>
-                    <td>Fragaria × ananassa</td>
-                </tr>
-            </table>
-        </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Alumni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
 
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e9f7ef;
+        }
+
+        td img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-pic {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            margin-right: 10px;
+        }
+
+        td {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .profile-pic img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .profile-name {
+            font-weight: bold;
+        }
+
+        .profile-info {
+            font-size: 1.1em;
+        }
+
+        @media screen and (max-width: 768px) {
+            table {
+                width: 100%;
+                font-size: 0.9em;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-name {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Registered Alumni</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="profile-pic">
+                    <img src="../images/HA.JPG" alt="Rochelle Bayogbog">
+                </td>
+                <td>Rochelle Bayogbog</td>
+                <td>18</td>
+                <td>BSIT</td>
+            </tr>
+            <tr>
+                <td class="profile-pic">
+                    <img src="../images/girl.jpg" alt="Lyka Mae Ducusin">
+                </td>
+                <td>Lyka Mae Ducusin</td>
+                <td>18</td>
+                <td>BSIT</td>
+            </tr>
+            <tr>
+                <td class="profile-pic">
+                    <img src="../images/girl.jpg" alt="Precious Valera">
+                </td>
+                <td>Precious Valera</td>
+                <td>18</td>
+                <td>BSIT</td>
+            </tr>
+            <tr>
+                <td class="profile-pic">
+                    <img src="../images/girl.jpg" alt="Ardeeh Valdez">
+                </td>
+                <td>Ardeeh Valdez</td>
+                <td>18</td>
+                <td>BSIT</td>
+           
+        </tbody>
+    </table>
+
+</body>
+</html>
 
