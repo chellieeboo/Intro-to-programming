@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects Lab</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light text-dark">
+
+    <div class="container mt-4">
+        <h1 class="display-4 font-weight-bold text-center bg-success mt-5 py-2">Welcome to JS Objects Lab</h1>
+       
+
+        <h4 class=" text-center">Balm</h4>
+        <div id="balm-container" class="row"></div>
+    </div>
+
+    <div class="container mt-4">
+        <h4 class= "text-center py-2">Headphone</h4>
+        <div id="headphone-container" class="row"></div> <!-- Updated ID here -->
+    </div>
+
+    <div class="container mt-4">
+        <h4 class= "text-center py-2">Sunglasses</h4>
+        <div id="sunglasses-container" class="row"></div> <!-- Updated ID here -->
+    </div>
+
+    <script>
+        const Balm = [
+            { name: "liminy mint", price: "180", flavor: "Fresh mint and lime cooler", image: "images/3 obect/balm1.jpg" },
+            { name: "cool", price: "150", flavor: "Refreshing sweet", image: "images/3 obect/balm2.jpg" },
+            { name: "reax", price: "180", flavor: "zesty orange to juicy peach", image: "images/3 obect/balm3.jpg" }
+        ];
+    
+        const balmContainer = document.getElementById('balm-container');
+
+        const Headphone = [
+            { name: "Bass Booster", price: "950", color: "black", image: "images/3 obect/h1.jpg" },
+            { name: "Cool", price: "1,250", color: "pink", image: "images/3 obect/h2.jpg" },
+            { name: "Reax", price: "950", color: "sky", image: "images/3 obect/h3.jpg" }
+        ];
+
+        const HeadphoneContainer = document.getElementById('headphone-container'); // Updated ID here
+
+        const Sunglasses = [
+            { name: "Classic Shades", price: "500", color: "brown", image: "images/3 obect/s1.jpg" },
+            { name: "Cool", price: "380", color: "white", image: "images/3 obect/s2.jpg" },
+            { name: "Reax", price: "380", color: "black", image: "images/3 obect/s3.jpg" }
+        ];
+
+        const SunglassesContainer = document.getElementById('sunglasses-container'); // Updated ID here
+    
+        // Loop through Balm array and display each item
+        Balm.forEach(balm => {
+            balmContainer.innerHTML += `
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="${balm.image}" class="card-img-top" alt="${balm.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${balm.name}</h5>
+                            <p class="card-text">Price: ${balm.price}</p>
+                            <p class="card-text">Flavor: ${balm.flavor}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Loop through Headphone array and display each item
+        Headphone.forEach(headphone => {
+            HeadphoneContainer.innerHTML += `
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="${headphone.image}" class="card-img-top" alt="${headphone.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${headphone.name}</h5>
+                            <p class="card-text">Price: ${headphone.price}</p>
+                            <p class="card-text">color: ${headphone.color}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Loop through Sunglasses array and display each item
+        Sunglasses.forEach(sunglasses => {
+            SunglassesContainer.innerHTML += `
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="${sunglasses.image}" class="card-img-top" alt="${sunglasses.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${sunglasses.name}</h5>
+                            <p class="card-text">Price: ${sunglasses.price}</p>
+                            <p class="card-text">color: ${sunglasses.color}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+    </script>
+</body>
+</html>

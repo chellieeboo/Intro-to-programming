@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-11</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light text-dark">
+
+<header class="text-center py-5 bg-success text-white">
+    <h1 class="display-4 font-weight-bold">Sip your mind, Get it Summer! 🍹</h1>
+    <p class="lead">Cool drinks and tasty snacks to beat the heat</p>
+</header>
+
+<div class="container mt-5 text-center">
+    <h2 class="display-4">Drinks</h2>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/mine/green.jpg" class="card-img-top img-fluid" alt="Lime Green Drink">
+                <div class="card-body text-center">
+                    <h5 class="card-title" id="lm-name"></h5>
+                    <p class="card-text" id="lm-size"></p>
+                    <p class="card-text text-dark" id="lm-price"></p>
+                    <button class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/mine/watermelon.jpg" class="card-img-top img-fluid" alt="Watermelon Drink">
+                <div class="card-body text-center">
+                    <h5 class="card-title" id="wm-name"></h5>
+                    <p class="card-text" id="wm-size"></p>
+                    <p class="card-text text-dark" id="wm-price"></p>
+                    <button class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/mine/mango.jpg" class="card-img-top img-fluid" alt="Mango Drink">
+                <div class="card-body text-center">
+                    <h5 class="card-title" id="mg1-name"></h5>
+                    <p class="card-text" id="mg2-size"></p>
+                    <p class="card-text text-dark" id="mg3-price"></p>
+                    <button class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 text-center">
+    <h2 class="display-4">Snacks</h2>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/mine/kiwi.jpg" class="card-img-top img-fluid" alt="Kiwi">
+                <div class="card-body text-center">
+                    <h5 class="card-title" id="kw-name"></h5>
+                    <p class="card-text" id="kw-size"></p>
+                    <p class="card-text text-dark" id="kw-price"></p>
+                    <button class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/mine/berry jelly.jpg" class="card-img-top img-fluid" alt="Berry Jelly">
+                <div class="card-body text-center">
+                    <h5 class="card-title" id="bj-name"></h5>
+                    <p class="card-text" id="bj-size"></p>
+                    <p class="card-text text-dark" id="bj-price"></p>
+                    <button class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/mine/mango cheesekeyk.jpg" class="card-img-top img-fluid" alt="Mango Cheesecake">
+                <div class="card-body text-center">
+                    <h5 class="card-title" id="mc-name"></h5>
+                    <p class="card-text" id="mc-size"></p>
+                    <p class="card-text text-dark" id="mc-price"></p>
+                    <button class="btn btn-primary">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let liminygreen = { name: "liminygreen", size: "regular", price: "₱ 80.00" };
+    let pepo = { name: "pepo", size: "regular", price: "₱ 80.00" };
+    let mangokeyk = { name: "mangokeyk", size: "regular", price: "₱ 80.00" };
+
+    let kiwi = { name: "kiwi", size: "small", price: "₱ 60.00" };
+    let berryjelly = { name: "berryjelly", size: "small", price: "₱ 80.00" };
+    let mangocheez = { name: "mangocheez", size: "small", price: "₱ 60.00" };
+
+    // Drinks
+    document.getElementById("lm-name").innerHTML = liminygreen.name;
+    document.getElementById("lm-size").innerHTML = "Size: " + liminygreen.size;
+    document.getElementById("lm-price").innerHTML = "Price: " + liminygreen.price;
+
+    document.getElementById("wm-name").innerHTML = pepo.name;
+    document.getElementById("wm-size").innerHTML = "Size: " + pepo.size;
+    document.getElementById("wm-price").innerHTML = "Price: " + pepo.price;
+
+    document.getElementById("mg1-name").innerHTML = mangokeyk.name;
+    document.getElementById("mg2-size").innerHTML = "Size: " + mangokeyk.size;
+    document.getElementById("mg3-price").innerHTML = "Price: " + mangokeyk.price;
+
+    // Snacks
+    document.getElementById("kw-name").innerHTML = kiwi.name;
+    document.getElementById("kw-size").innerHTML = "Size: " + kiwi.size;
+    document.getElementById("kw-price").innerHTML = "Price: " + kiwi.price;
+
+    document.getElementById("bj-name").innerHTML = berryjelly.name;
+    document.getElementById("bj-size").innerHTML = "Size: " + berryjelly.size;
+    document.getElementById("bj-price").innerHTML = "Price: " + berryjelly.price;
+
+    document.getElementById("mc-name").innerHTML = mangocheez.name;
+    document.getElementById("mc-size").innerHTML = "Size: " + mangocheez.size;
+    document.getElementById("mc-price").innerHTML = "Price: " + mangocheez.price;
+</script>
+</body>
+</html>

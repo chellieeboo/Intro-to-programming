@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Checker</title>
+    <!-- Updated Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <h1 class="text-center">Odd or Even Checker</h1>
+    <div class="form-group">
+        <label for="num1">Enter a Number:</label>
+        <input type="text" class="form-control" id="num1">
+    </div>
+    <button class="btn btn-primary" onclick="oddEven()">Check</button>
+
+    <p class="mt-3">The number is: <span id="oddEven"></span></p>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function oddEven() {
+            let num1s = document.getElementById('num1').value;
+            let num1i = parseInt(num1s, 10); // Specify base 10 for parsing
+
+            // Check if the input is a valid number
+            if (isNaN(num1i)) {
+                document.getElementById('oddEven').innerHTML = "Invalid Input";
+                return; // Stop the function if the input is invalid
+            }
+
+            // Determine if the number is odd or even
+            if (num1i % 2 === 0) {
+                document.getElementById('oddEven').innerHTML = "Even";
+            } else {
+                document.getElementById('oddEven').innerHTML = "Odd";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

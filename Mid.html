@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function handleSubmit() {
+            event.preventDefault(); 
+            const textInput = document.getElementById('text').value;
+            const messageInput = document.getElementById('message');
+            messageInput.value = textInput; 
+           
+        }   
+
+        function updateStyle(property, value) {
+            const messageInput = document.getElementById('message');
+            messageInput.style[property] = value; 
+        }
+    </script>
+</head>                                                                                                                                                                        
+<body>      
+    <form class="container mt-5 border border-success p-3" onsubmit="handleSubmit(event)">
+            <label class="form-labe">Message:</label>
+            <input type="text" id="message" class="form-control">
+            <input type="text" id="text" class="form-control" placeholder="Write a post.">
+        <input type="submit" id="post" class="btn btn-success" value="Post">
+    </form>
+
+        <ul class="list-unstyled text-center">
+            <li class="mb-5">
+                <label class="form-label">Font Family:</label><br>
+                <select class="form-select" onchange="updateStyle('fontFamily', this.value)">
+                    <option value="Bookman Old Style">Bookman Old Style</option>
+                    <option value="Roman">Roman</option>
+                    <option value="Calligrapher">Calligrapher</option>
+                    <option value="Lucida Handwriting">Lucida Handwriting</option>
+                </select>
+            </li>
+
+            <li class="mb-5">
+                <label class="form-label">Font Color:</label><br>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-o utline-dark m-1" onclick="updateStyle('color', 'black')">Black</button>
+                    <button type="button" class="btn btn-outline-warning m-1" onclick="updateStyle('color', 'orange')">Orange</button>
+                    <button type="button" class="btn btn-outline-success m-1" onclick="updateStyle('color', 'green')">Green</button>
+                    <button type="button" class="btn btn-outline-info m-1" onclick="updateStyle('color', 'blue')">Blue</button>
+                </div>
+            </li>
+
+            <li class="mb-5">
+                <label class="form-label">Font Size:</label><br>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-dark m-1" onclick="updateStyle('fontSize', '50px')">50px</button>
+                    <button type="button" class="btn btn-outline-warning m-1" onclick="updateStyle('fontSize', '30px')">30px</button>
+                    <button type="button" class="btn btn-outline-success m-1" onclick="updateStyle('fontSize', '40px')">40px</button>
+                    <button type="button" class="btn btn-outline-info m-1" onclick="updateStyle('fontSize', '20px')">20px</button>
+
+                    <li class="mb-5">
+                        <label class="form-label">Background Color:</label><br>
+                        <div class="btn-group btn-group-sm">
+                            <button type="button" class="btn btn-dark m-1" onclick="updateStyle('backgroundColor', 'black')">Black</button>
+                            <button type="button" class="btn btn-warning m-1" onclick="updateStyle('backgroundColor', 'orange')">Orange</button>
+                            <button type="button" class="btn btn-success m-1" onclick="updateStyle('backgroundColor', 'lightgreen')">Light Green</button>
+                            <button type="button" class="btn btn-info m-1" onclick="updateStyle('backgroundColor', 'lightblue')">Light Blue</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </body>
+        </html>
+    
