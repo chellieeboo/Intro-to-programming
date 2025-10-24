@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h1>JavaScript Quiz 📚</h1>
+            <p>Test your JavaScript knowledge with this simple quiz!</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="header">
+                <span id="question-counter">Question: 1/5</span>
+                <span id="score">Score: 0</span>
+            </div>
+            
+            <h2 id="question">What is JavaScript?</h2>
+            
+            <div id="options" class="options">
+                <!-- Options will be inserted by JavaScript -->
+            </div>
+
+            <button id="next-btn" class="hidden" onclick="nextQuestion()">Next Question</button>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h1>Quiz Completed! 🎉</h1>
+            <p id="final-score">Your final score: 0/5</p>
+            <button onclick="restartQuiz()">Try Again</button>
+        </div>
+    </div>
+    <script src=" script quiz.js"></script>
+</body>
+</html>
