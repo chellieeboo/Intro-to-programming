@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Fitnation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-dark">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">🏋️ Fitnation</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon bg-light"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                              <li class="nav-item"><a class="nav-link text-white" href="service.html">Service</a></li>
+                                            <li class="nav-item"><a class="nav-link text-white" href="workout.html">Workout</a></li>
+
+
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="signup.html">Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="login.html">Log In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sign Up Form -->
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Create Your Account</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your full name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Create a password">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input type="number" class="form-control" placeholder="Enter your age">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-select">
+              <option selected disabled>Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Sign Up</button>
+        </form>
+        <p class="text-center mt-3">Already have an account? <a href="login.html" class="text-info">Log in</a></p>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
